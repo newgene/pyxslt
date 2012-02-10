@@ -557,7 +557,13 @@ class Serializer(object):
                 self._serializeObject(parentNode, objName, obj)
 
         else:
-            parentNode.addContent(str(obj))
+            #Patched by Chunlei Wu 20110316 to handling Unicode string
+            #
+            #This is the orginal line:
+            #parentNode.addContent(str(obj))
+            #
+            #Changed to this one:
+            parentNode.addContent(unicode(obj).encode("utf-8"))
 
 
     def _serializeDict(self, parentNode, element):

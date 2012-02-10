@@ -1,0 +1,50 @@
+Metadata-Version: 1.0
+Name: pyxslt
+Version: 0.9.1
+Summary: Serialize Python objects to XML using an XSL stylesheet.
+Home-page: http://www.strangeGizmo.com/products/pyxslt/
+Author: Michael Alyn Miller
+Author-email: malyn@strangeGizmo.com
+License: BSD License
+Description: 
+        pyxslt makes it easy to turn Python objects into XML documents.  In
+        addition to basic XML serialization, pyxslt can also apply an XSL
+        stylesheet to the serialized XML fragments.  You could, for example, use
+        pyxslt to convert the results of an SQLObject_ query to an XHTML file.
+        
+        All Python objects given to pyxslt are converted into their string
+        representations.  pyxslt focuses on serializing objects in such a way as
+        to make the construction of XSL stylesheets as easy as possible.  As a
+        result, pyxslt's XML serialization is usually not reversible.
+        
+        In other words, pyxslt is not a replacement for pickle_, marshal_,
+        shelve_, or any of the other true serialization modules.  pyxslt is
+        designed with one-way XSL transformation in mind.
+        
+        pyxslt makes use of libxml2_ to build its internal XML documents and
+        libxslt_ to perform XSL transformations.  Both packages must be
+        installed in order for pyxslt to do its job.
+        
+        .. _SQLObject: http://sqlobject.org/
+        .. _pickle: http://docs.python.org/lib/module-pickle.html
+        .. _marshal: http://docs.python.org/lib/module-marshal.html
+        .. _shelve: http://docs.python.org/lib/module-shelve.html
+        .. _libxml2: http://xmlsoft.org/
+        .. _libxslt: http://xmlsoft.org/XSLT/
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content :: CGI Tools/Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Markup :: HTML
+Classifier: Topic :: Text Processing :: Markup :: XML

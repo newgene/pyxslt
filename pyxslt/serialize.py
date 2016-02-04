@@ -573,7 +573,14 @@ class Serializer(object):
             itemNode = parentNode.newChild(None, 'item', None)
 
             # Add the key to the item node.
-            itemNode.newProp('key', str(key))
+
+            #Patched by Chunlei Wu 20160204 to handling Unicode string
+            #
+            #This is the orginal line:
+            #itemNode.newProp('key', str(key))
+            #
+            #Changed to this one:
+            itemNode.newProp('key', unicode(key).encode("utf-8"))
 
             # Serialize the item.
             self._serializeItem(itemNode, value)
